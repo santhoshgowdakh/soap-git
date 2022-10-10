@@ -18,6 +18,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
+	public void updateEmployee(Employee employee) {
+		employeeRepository.save(employee);
+	}
+
+	@Override
 	public Employee getEmployeeById(int employeeId) {
 		return employeeRepository.findByEmployeeId(employeeId);
 	}
