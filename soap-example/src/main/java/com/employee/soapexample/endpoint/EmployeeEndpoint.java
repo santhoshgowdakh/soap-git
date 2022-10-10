@@ -51,7 +51,7 @@ public class EmployeeEndpoint {
 	public UpdateEmployeeResponse updateEmployee(@RequestPayload UpdateEmployeeRequest request) {
 		Employee employee = new Employee();
 		BeanUtils.copyProperties(request.getEmployeeInfo(), employee);
-		employeeService.addEmployee(employee);
+		employeeService.updateEmployee(employee);
 		ServiceStatus serviceStatus = new ServiceStatus();
 		serviceStatus.setStatus("SUCCESS");
 		serviceStatus.setMessage("Employee Updated Successfully");

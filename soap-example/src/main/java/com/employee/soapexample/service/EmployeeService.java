@@ -6,9 +6,10 @@ public interface EmployeeService {
 
 	void addEmployee(Employee employee);
 
-	public void updateEmployee(Employee employee);
+	void updateEmployee(Employee employee);
 
 	Employee getEmployeeById(int employeeId);
 
 	void deleteEmployee(int employeeId);
+
 }
